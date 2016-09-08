@@ -68,7 +68,7 @@ class RequestObject(object):
     def set_body(self, data):
         """ set the POST/PUT body content """
         self._body = data
-        self._headers['Content-Length'] = len(self._body)
+        self._headers['Content-Length'] = str(len(self._body))
 
     def set_content_type(self, data):
         """ allow manual setting of content type """
